@@ -1,0 +1,8 @@
+login = "username"
+password = "password"
+host = "sftp://ftp.server.tld"
+remote_dir = "/media/sdj1/svmkernel/private/rtorrent/data/"
+local_dir = "/opt/plexmedia/media"
+filters = [
+    "MasterChef.*"
+]
