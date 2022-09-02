@@ -99,7 +99,6 @@ func main() {
 			[]string{lftpCommands, strings.Join(pgets, "; ")}, "; ")
 	}
 
-	// lftpCommand := "\"" + lftpCommands + "\""
 	cmd := exec.Command("lftp", "-c", lftpCommands)
 	cmd.Stdout = os.Stdout
 	cmd.Stderr = os.Stderr
