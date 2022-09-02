@@ -103,7 +103,6 @@ func main() {
 	cmd := exec.Command("lftp", "-c", lftpCommands)
 	cmd.Stdout = os.Stdout
 	cmd.Stderr = os.Stderr
-	fmt.Println(cmd.String())
 	if err := cmd.Run(); err != nil {
 		fmt.Println(err)
 		os.Exit(1)
