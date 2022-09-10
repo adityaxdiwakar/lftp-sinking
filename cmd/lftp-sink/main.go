@@ -38,11 +38,15 @@ func init() {
 }
 
 func buildMirror(name string) string {
+	name = strings.ReplaceAll(name, " ", "\\ ")
+
 	return fmt.Sprintf("mirror --use-pget-n=%d sftp://%s:%s@%s%s%s",
 		conf.Threads, conf.Login, conf.Password, conf.Host, conf.RemoteDir, name)
 }
 
 func buildPget(name string) string {
+	name = strings.ReplaceAll(name, " ", "\\ ")
+
 	return fmt.Sprintf("pget -n %d -c sftp://%s:%s@%s%s%s",
 		conf.Threads, conf.Login, conf.Password, conf.Host, conf.RemoteDir, name)
 }
